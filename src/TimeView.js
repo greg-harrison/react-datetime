@@ -71,9 +71,13 @@ var DateTimePickerTime = onClickOutside(createClass({
 
 	renderDayPart: function () {
 		return React.createElement('div', { key: 'dayPart', className: 'rdtCounter' }, [
-			React.createElement('span', { key: 'up', className: 'rdtBtn', onMouseDown: this.onStartClicking('toggleDayPart', 'hours') }, ''),
+			React.createElement('span', { key: 'up', className: 'rdtBtn', onMouseDown: this.onStartClicking('toggleDayPart', 'hours') }, [
+				React.createElement('i', { key: 'i', className: 'fa fa-chevron-up' })
+			]),
 			React.createElement('div', { key: this.state.daypart, className: 'rdtCount' }, this.state.daypart),
-			React.createElement('span', { key: 'do', className: 'rdtBtn', onMouseDown: this.onStartClicking('toggleDayPart', 'hours') }, '')
+			React.createElement('span', { key: 'do', className: 'rdtBtn', onMouseDown: this.onStartClicking('toggleDayPart', 'hours') }, [
+				React.createElement('i', { key: 'i', className: 'fa fa-chevron-down' })
+			])
 		]);
 	},
 
